@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		188EADE77B7EFDA098B7CA2F /* Pods_XKPermissionUtil_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633C09228A76D0E98C4E77DC /* Pods_XKPermissionUtil_Tests.framework */; };
+		24A9E57395BA34EF0EB8ED32 /* Pods_XKPermissionUtil_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3CCCFC7C31945DA85C0211 /* Pods_XKPermissionUtil_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -21,9 +21,9 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		60E2878D80E33F42C18E3ECE /* Pods_XKPermissionUtil_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E606CEA0F5A2CB0908B4B8E /* Pods_XKPermissionUtil_Example.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		EFA7DC8FEC42BAAE4A459D1E /* Pods_XKPermissionUtil_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA771A38457D75FA81BDFB81 /* Pods_XKPermissionUtil_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		25E6AC680268F8042C36D357 /* Pods-XKPermissionUtil_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XKPermissionUtil_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XKPermissionUtil_Tests/Pods-XKPermissionUtil_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		3E606CEA0F5A2CB0908B4B8E /* Pods_XKPermissionUtil_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XKPermissionUtil_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		43E5870817E82F5C090E99CE /* Pods-XKPermissionUtil_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XKPermissionUtil_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XKPermissionUtil_Tests/Pods-XKPermissionUtil_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4FF0002FDECF7E3D6A92FD2E /* Pods-XKPermissionUtil_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XKPermissionUtil_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-XKPermissionUtil_Example/Pods-XKPermissionUtil_Example.release.xcconfig"; sourceTree = "<group>"; };
-		555008B0FD4D43E566A82935 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1E13B1D27922F785D664024D /* Pods-XKPermissionUtil_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XKPermissionUtil_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-XKPermissionUtil_Example/Pods-XKPermissionUtil_Example.release.xcconfig"; sourceTree = "<group>"; };
+		232A7B64EA3CFD6D3DB1FE3A /* Pods-XKPermissionUtil_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XKPermissionUtil_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XKPermissionUtil_Tests/Pods-XKPermissionUtil_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		30B299386A30F118CEA4EA4F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		3E3CCCFC7C31945DA85C0211 /* Pods_XKPermissionUtil_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XKPermissionUtil_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44A75A3BD048F2724F493C93 /* Pods-XKPermissionUtil_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XKPermissionUtil_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XKPermissionUtil_Tests/Pods-XKPermissionUtil_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* XKPermissionUtil_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XKPermissionUtil_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,12 +61,12 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		633C09228A76D0E98C4E77DC /* Pods_XKPermissionUtil_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XKPermissionUtil_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BE231D737CB6DF7C1C3CBFC /* XKPermissionUtil.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XKPermissionUtil.podspec; path = ../XKPermissionUtil.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A4FD10C40BCE5B133F7078DC /* XKPermissionUtil.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = XKPermissionUtil.podspec; path = ../XKPermissionUtil.podspec; sourceTree = "<group>"; };
-		B923301647E98912825DC164 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		D6405F433766A8E0100750B7 /* Pods-XKPermissionUtil_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XKPermissionUtil_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XKPermissionUtil_Example/Pods-XKPermissionUtil_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9C6E17281BB2EE8F70317198 /* Pods-XKPermissionUtil_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XKPermissionUtil_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XKPermissionUtil_Example/Pods-XKPermissionUtil_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BA771A38457D75FA81BDFB81 /* Pods_XKPermissionUtil_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XKPermissionUtil_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4DBE67E3E15492BBE2EC930 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				60E2878D80E33F42C18E3ECE /* Pods_XKPermissionUtil_Example.framework in Frameworks */,
+				24A9E57395BA34EF0EB8ED32 /* Pods_XKPermissionUtil_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				188EADE77B7EFDA098B7CA2F /* Pods_XKPermissionUtil_Tests.framework in Frameworks */,
+				EFA7DC8FEC42BAAE4A459D1E /* Pods_XKPermissionUtil_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				AF766DE8EDA81264ADD86030 /* Pods */,
+				6887D7CD195CF32E761B6F56 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,8 +123,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				3E606CEA0F5A2CB0908B4B8E /* Pods_XKPermissionUtil_Example.framework */,
-				633C09228A76D0E98C4E77DC /* Pods_XKPermissionUtil_Tests.framework */,
+				3E3CCCFC7C31945DA85C0211 /* Pods_XKPermissionUtil_Example.framework */,
+				BA771A38457D75FA81BDFB81 /* Pods_XKPermissionUtil_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,20 +178,20 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				A4FD10C40BCE5B133F7078DC /* XKPermissionUtil.podspec */,
-				B923301647E98912825DC164 /* README.md */,
-				555008B0FD4D43E566A82935 /* LICENSE */,
+				6BE231D737CB6DF7C1C3CBFC /* XKPermissionUtil.podspec */,
+				D4DBE67E3E15492BBE2EC930 /* README.md */,
+				30B299386A30F118CEA4EA4F /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		AF766DE8EDA81264ADD86030 /* Pods */ = {
+		6887D7CD195CF32E761B6F56 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D6405F433766A8E0100750B7 /* Pods-XKPermissionUtil_Example.debug.xcconfig */,
-				4FF0002FDECF7E3D6A92FD2E /* Pods-XKPermissionUtil_Example.release.xcconfig */,
-				43E5870817E82F5C090E99CE /* Pods-XKPermissionUtil_Tests.debug.xcconfig */,
-				25E6AC680268F8042C36D357 /* Pods-XKPermissionUtil_Tests.release.xcconfig */,
+				9C6E17281BB2EE8F70317198 /* Pods-XKPermissionUtil_Example.debug.xcconfig */,
+				1E13B1D27922F785D664024D /* Pods-XKPermissionUtil_Example.release.xcconfig */,
+				44A75A3BD048F2724F493C93 /* Pods-XKPermissionUtil_Tests.debug.xcconfig */,
+				232A7B64EA3CFD6D3DB1FE3A /* Pods-XKPermissionUtil_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -203,11 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "XKPermissionUtil_Example" */;
 			buildPhases = (
-				0618C9299D8B39EAB2F38481 /* [CP] Check Pods Manifest.lock */,
+				0AD659D627262707FC677410 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				EBFD29EACBC20F9C85680722 /* [CP] Embed Pods Frameworks */,
+				2F9F244656CCD4A806CE0A15 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,7 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "XKPermissionUtil_Tests" */;
 			buildPhases = (
-				FF62798A40613E34A6AA73A9 /* [CP] Check Pods Manifest.lock */,
+				4CDCC9F2703218AAD80370A5 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
@@ -294,20 +294,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0618C9299D8B39EAB2F38481 /* [CP] Check Pods Manifest.lock */ = {
+		0AD659D627262707FC677410 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-XKPermissionUtil_Example-checkManifestLockResult.txt",
 			);
@@ -316,20 +312,16 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EBFD29EACBC20F9C85680722 /* [CP] Embed Pods Frameworks */ = {
+		2F9F244656CCD4A806CE0A15 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-XKPermissionUtil_Example/Pods-XKPermissionUtil_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/XKPermissionUtil/XKPermissionUtil.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XKPermissionUtil.framework",
 			);
@@ -338,20 +330,16 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XKPermissionUtil_Example/Pods-XKPermissionUtil_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF62798A40613E34A6AA73A9 /* [CP] Check Pods Manifest.lock */ = {
+		4CDCC9F2703218AAD80370A5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-XKPermissionUtil_Tests-checkManifestLockResult.txt",
 			);
@@ -494,7 +482,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6405F433766A8E0100750B7 /* Pods-XKPermissionUtil_Example.debug.xcconfig */;
+			baseConfigurationReference = 9C6E17281BB2EE8F70317198 /* Pods-XKPermissionUtil_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -509,7 +497,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FF0002FDECF7E3D6A92FD2E /* Pods-XKPermissionUtil_Example.release.xcconfig */;
+			baseConfigurationReference = 1E13B1D27922F785D664024D /* Pods-XKPermissionUtil_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -524,7 +512,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43E5870817E82F5C090E99CE /* Pods-XKPermissionUtil_Tests.debug.xcconfig */;
+			baseConfigurationReference = 44A75A3BD048F2724F493C93 /* Pods-XKPermissionUtil_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -548,7 +536,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25E6AC680268F8042C36D357 /* Pods-XKPermissionUtil_Tests.release.xcconfig */;
+			baseConfigurationReference = 232A7B64EA3CFD6D3DB1FE3A /* Pods-XKPermissionUtil_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -1,0 +1,6 @@
+framework module XKPermissionUtil {
+  umbrella header "XKPermissionUtil-umbrella.h"
+
+  export *
+  module * { export * }
+}

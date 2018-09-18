@@ -1,0 +1,16 @@
+PODS:
+  - XKPermissionUtil (1.0.0)
+
+DEPENDENCIES:
+  - XKPermissionUtil (from `../`)
+
+EXTERNAL SOURCES:
+  XKPermissionUtil:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XKPermissionUtil: 9c9d6dc4f91f60808cdd99faa73b3866b8aa120e
+
+PODFILE CHECKSUM: bfa94174ad7c824899f0280389324a53ff4f8dd5
+
+COCOAPODS: 1.5.3

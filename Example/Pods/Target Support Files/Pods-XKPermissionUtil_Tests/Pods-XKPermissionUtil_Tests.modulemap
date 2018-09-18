@@ -1,0 +1,6 @@
+framework module Pods_XKPermissionUtil_Tests {
+  umbrella header "Pods-XKPermissionUtil_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
