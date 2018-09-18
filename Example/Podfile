@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XKPermissionUtil_Example' do
+  pod 'XKPermissionUtil', :path => '../'
+
+  target 'XKPermissionUtil_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
