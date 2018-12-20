@@ -17,7 +17,7 @@
     
     switch (authStatus) {
             //还没决定
-        case AVAuthorizationStatusNotDetermined:
+            case AVAuthorizationStatusNotDetermined:
         {
             //视频
             if (type == AVMediaTypeVideo) {
@@ -44,16 +44,16 @@
         }
             break;
             //未授权，家长限制
-        case AVAuthorizationStatusRestricted:
+            case AVAuthorizationStatusRestricted:
             //未授权
-        case AVAuthorizationStatusDenied:
+            case AVAuthorizationStatusDenied:
         {
             if (completed) {
                 completed(NO, authStatus);
             }
         }
             break;
-        case AVAuthorizationStatusAuthorized:
+            case AVAuthorizationStatusAuthorized:
         {
             if (completed) {
                 completed(YES, authStatus);
@@ -98,21 +98,21 @@
     PHAuthorizationStatus authStatus = [PHPhotoLibrary authorizationStatus];
     switch (authStatus) {
             //已授权
-        case PHAuthorizationStatusAuthorized:
+            case PHAuthorizationStatusAuthorized:
             if (completed) {
                 completed(YES, authStatus);
             }
             break;
             //未授权，家长限制
-        case PHAuthorizationStatusRestricted:
+            case PHAuthorizationStatusRestricted:
             //未授权
-        case PHAuthorizationStatusDenied:
+            case PHAuthorizationStatusDenied:
             if (completed) {
                 completed(NO, authStatus);
             }
             break;
             //还没决定
-        case PHAuthorizationStatusNotDetermined:
+            case PHAuthorizationStatusNotDetermined:
         {
             [self xk_photoAuthAction:^(BOOL result) {
                 
@@ -125,7 +125,7 @@
             
         }
             break;
-        
+            
         default:
             if (completed) {
                 completed(NO, authStatus);
@@ -141,4 +141,119 @@
     }];
 }
 
++ (void)xk_goAppSystemSettingType:(XKSourceType)type showAlertView:(BOOL)showAlertView {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        if (showAlertView) {
+            
+            NSDictionary *appInfo = [[NSBundle mainBundle] infoDictionary];
+            NSString *appName = appInfo[@"CFBundleDisplayName"];
+            NSString *title = [NSString stringWithFormat:@"%@需要访问您的%@",appName, type == XKSourceTypeCamera ? @"相机" : @"相册"];
+            UIAlertController *alcrtC = [UIAlertController alertControllerWithTitle:nil message:title preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *goAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                    [[UIApplication sharedApplication] openURL:url];
+                }
+            }];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            [alcrtC addAction:cancelAction];
+            [alcrtC addAction:goAction];
+            
+            [[self xk_currentViewController] presentViewController:alcrtC animated:YES completion:nil];
+        }
+        else {
+            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                [[UIApplication sharedApplication] openURL:url];
+            }
+        }
+        
+    });
+}
+
++ (UIViewController *)xk_currentViewController {
+    // Find best view controller
+    UIViewController *viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    return [self findBestViewController:viewController];
+}
+
++ (UIViewController *)findBestViewController:(UIViewController *)vc {
+    if (vc.presentedViewController) {
+        // Return presented view controller
+        return [self findBestViewController:vc.presentedViewController];
+    } else if ([vc isKindOfClass:[UISplitViewController class]]) {
+        // Return right hand side
+        UISplitViewController *svc = (UISplitViewController *)vc;
+        if (svc.viewControllers.count > 0)
+        return [self findBestViewController:svc.viewControllers.lastObject];
+        else
+        return vc;
+    } else if ([vc isKindOfClass:[UINavigationController class]]) {
+        // Return top view
+        UINavigationController *svc = (UINavigationController *)vc;
+        if (svc.viewControllers.count > 0)
+        return [self findBestViewController:svc.topViewController];
+        else
+        return vc;
+    } else if ([vc isKindOfClass:[UITabBarController class]]) {
+        // Return visible view
+        UITabBarController *svc = (UITabBarController *)vc;
+        if (svc.viewControllers.count > 0)
+        return [self findBestViewController:svc.selectedViewController];
+        else
+        return vc;
+    } else {
+        // Unknown view controller type, return last child view controller
+        return vc;
+    }
+}
+
 @end
+
+/*
+ NSArray *prefsArray = @[
+ @"prefs::root=General&path=About",
+ @"prefs::root=General&path=ACCESSIBILITY",
+ @"prefs::root=AIRPLANE_MODE",
+ @"prefs::root=General&path=AUTOLOCK",
+ @"prefs::root=General&path=USAGE/CELLULAR_USAGE",
+ @"prefs::root=Brightness",    //打开Brightness(亮度)设置界面
+ @"prefs::root=Bluetooth",    //打开蓝牙设置
+ @"prefs::root=General&path=DATE_AND_TIME",    //日期与时间设置
+ @"prefs::root=FACETIME",    //打开FaceTime设置
+ @"prefs::root=General",    //打开通用设置
+ @"prefs::root=General&path=Keyboard",    //打开键盘设置
+ @"prefs::root=CASTLE",    //打开iClound设置
+ @"prefs::root=CASTLE&path=STORAGE_AND_BACKUP",    //打开iCloud下的储存空间
+ @"prefs::root=General&path=INTERNATIONAL",    //打开通用下的语言和地区设置
+ @"prefs::root=LOCATION_SERVICES",    //打开隐私下的定位服务
+ @"prefs::root=ACCOUNT_SETTINGS",
+ @"prefs::root=MUSIC",    //打开设置下的音乐
+ @"prefs::root=MUSIC&path=EQ",    //打开音乐下的均衡器
+ @"prefs::root=MUSIC&path=VolumeLimit",
+ @"prefs::root=General&path=Network",
+ @"prefs::root=NIKE_PLUS_IPOD",
+ @"prefs::root=NOTES",
+ @"prefs::root=NOTIFICATIONS_ID",
+ @"prefs::root=Phone",
+ @"prefs::root=Photos",
+ @"prefs::root=General&path=ManagedConfigurationList",
+ @"prefs::root=General&path=Reset",
+ @"prefs::root=Sounds&path=Ringtone",
+ @"prefs::root=Safari",
+ @"prefs::root=General&path=Assistan",
+ @"prefs::root=Sounds",
+ @"prefs::root=General&path=SOFTWARE_UPDATE_LINK",
+ @"prefs::root=STORE",
+ @"prefs::root=TWITTER",
+ @"prefs::root=FACEBOOK",
+ @"prefs::root=General&path=USAGE",
+ @"prefs::root=VIDEO",
+ @"prefs::root=General&path=Network/VPN",
+ @"prefs::root=Wallpaper",
+ @"prefs::root=WIFI",
+ @"prefs::root=INTERNET_TETHERING"
+ ];
+ */
