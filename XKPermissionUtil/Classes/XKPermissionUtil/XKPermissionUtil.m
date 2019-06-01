@@ -172,6 +172,46 @@
         
     });
 }
+#pragma mark 检测通讯录权限
++ (void)xk_checkAddressbookStatus:(void(^)(BOOL result,CNAuthorizationStatus authStatus))completed {
+    
+    CNAuthorizationStatus authStatus = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
+    switch (authStatus) {
+        case CNAuthorizationStatusAuthorized:
+            !completed ?: completed(YES, authStatus);
+            break;
+        case CNAuthorizationStatusDenied:
+//            @"此功能需要您授权本App访问通讯录\n设置方法:打开手机设置->隐私->通讯录"
+            !completed ?: completed(YES, authStatus);
+            break;
+        case CNAuthorizationStatusNotDetermined:
+        {
+            CNContactStore *contactStore = [[CNContactStore alloc] init];
+            [contactStore requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    !completed ?: completed(granted, authStatus);
+                });
+            }];
+        }
+            break;
+        case CNAuthorizationStatusRestricted:
+            !completed ?: completed(NO, authStatus);
+            break;
+    }
+    
+}
+#pragma mark 申请授权通讯录
++ (void)xk_addressbookAuthAction:(void(^)(BOOL result))completed {
+    
+    CNContactStore *contactStore = [[CNContactStore alloc] init];
+    [contactStore requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            !completed ?: completed(NO);
+        });
+    }];
+}
 
 + (UIViewController *)xk_currentViewController {
     // Find best view controller
@@ -179,6 +219,7 @@
     return [self findBestViewController:viewController];
 }
 
+#pragma mark 当前控制器
 + (UIViewController *)findBestViewController:(UIViewController *)vc {
     if (vc.presentedViewController) {
         // Return presented view controller

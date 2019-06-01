@@ -7,6 +7,7 @@
 //
 
 #import "XKViewController.h"
+#import "XKPermissionUtil.h"
 
 @interface XKViewController ()
 
@@ -18,6 +19,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [XKPermissionUtil xk_checkAddressbookStatus:^(BOOL result, CNAuthorizationStatus authStatus) {
+        if (authStatus == CNAuthorizationStatusDenied) {
+            
+        }
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning

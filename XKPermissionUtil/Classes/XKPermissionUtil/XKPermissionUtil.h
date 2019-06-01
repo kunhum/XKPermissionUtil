@@ -9,14 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import <Photos/Photos.h>
+#import <Contacts/Contacts.h>
 
 typedef NS_ENUM(NSInteger, XKSourceType) {
     
     XKSourceTypeCamera = 0,
-    XKSourceTypePhoto
+    XKSourceTypePhoto,
+    XKSourceTypeAddressbook
 };
 
 @interface XKPermissionUtil : NSObject
+
+///打开相应设置页
++ (void)xk_goAppSystemSettingType:(XKSourceType)type showAlertView:(BOOL)showAlertView;
 
 ///检测相机权限
 + (void)xk_checkCameraStatus:(void(^)(BOOL result,AVAuthorizationStatus authStatus))completed;
@@ -32,7 +37,10 @@ typedef NS_ENUM(NSInteger, XKSourceType) {
 + (void)xk_checkPhotoStatus:(void(^)(BOOL result,PHAuthorizationStatus authStatus))completed;
 ///申请授权照片
 + (void)xk_photoAuthAction:(void(^)(BOOL result))completed;
-///打开相应设置页
-+ (void)xk_goAppSystemSettingType:(XKSourceType)type showAlertView:(BOOL)showAlertView;
+
+///检测通讯录权限
++ (void)xk_checkAddressbookStatus:(void(^)(BOOL result,CNAuthorizationStatus authStatus))completed;
+///申请授权通讯录
++ (void)xk_addressbookAuthAction:(void(^)(BOOL result))completed;
 
 @end
