@@ -1,5 +1,5 @@
 PODS:
-  - XKPermissionUtil (1.0.2)
+  - XKPermissionUtil (1.0.3)
 
 DEPENDENCIES:
   - XKPermissionUtil (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  XKPermissionUtil: 04317bde20f036fa639d6651aa34c2093d48d8f5
+  XKPermissionUtil: 8c25f364894b0d39a0e99b60cba19c836a3f4ce0
 
 PODFILE CHECKSUM: bfa94174ad7c824899f0280389324a53ff4f8dd5
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.1

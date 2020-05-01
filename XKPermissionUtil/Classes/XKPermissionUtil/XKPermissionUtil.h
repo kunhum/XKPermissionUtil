@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import <Photos/Photos.h>
-#import <Contacts/Contacts.h>
+//#import <Contacts/Contacts.h>
 
 typedef NS_ENUM(NSInteger, XKSourceType) {
     
@@ -38,9 +38,9 @@ typedef NS_ENUM(NSInteger, XKSourceType) {
 ///申请授权照片
 + (void)xk_photoAuthAction:(void(^)(BOOL result))completed;
 
-///检测通讯录权限
-+ (void)xk_checkAddressbookStatus:(void(^)(BOOL result,CNAuthorizationStatus authStatus))completed;
-///申请授权通讯录
-+ (void)xk_addressbookAuthAction:(void(^)(BOOL result))completed;
+/////检测通讯录权限
+//+ (void)xk_checkAddressbookStatus:(void(^)(BOOL result,CNAuthorizationStatus authStatus))completed;
+/////申请授权通讯录
+//+ (void)xk_addressbookAuthAction:(void(^)(BOOL result))completed;
 
 @end
